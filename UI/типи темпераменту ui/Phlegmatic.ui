@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>684</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Garamond</family>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(152, 126, 167);</string>
+  </property>
+  <widget class="QLabel" name="Phlegmatic">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Garamond</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Флегматик</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Phlegmatic_desc">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>641</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Найбільш спокійний і врівноважений тип темпераменту,
+
+ якого складно вивести з себе.
+
+ Зовні виглядає незворушною, скупою на прояв емоцій людиною,
+
+ для якої взаємодія з оточуючими людьми не має особливого значення.
+
+В роботі відрізняється наполегливістю і завзятістю,
+
+ які в повній мірі компенсують йогo неспішний ритм.
+
+ Флегматик не боїться рутини, і часто є ідеальним виконавцем
+
+ для вирішення тривалих у часі, монотонних завдань.</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

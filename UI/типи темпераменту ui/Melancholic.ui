@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>608</width>
+    <height>280</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(188, 223, 238);</string>
+  </property>
+  <widget class="QLabel" name="Melancholic">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Garamond</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Меланхолік</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Melancholic_desc">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>60</y>
+     <width>481</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Garamond</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Чутливий, вразливий і ранимий тип темпераменту,
+ який найчастіше є вираженим інтровертом.
+ Може дуже гостро реагувати на різні зовнішнi
+ чинники, аж до того, що навіть незначний привід
+ може викликати в нього сльози і тривалу образу.
+Як правило, не впевнений в своїх силах,
+ швидко може опускати руки в разі невдачі,
+ відрізняється боязкістю і підвищеною стомлюваністю.</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

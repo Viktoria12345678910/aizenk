@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>660</width>
+    <height>594</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 246, 176);</string>
+  </property>
+  <widget class="QLabel" name="sanguine">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Garamond</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Сангвінік</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sanguine_desc">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>40</y>
+     <width>541</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Garamond</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Активний і емоційний тип темпераменту. 
+
+На відміну від холерика, має більш
+
+ позитивні погляди на світ і настрій його переважно
+
+ зі знаком плюс. 
+
+Зазвичай швидко реагує на події, має жваву міміку.
+
+ Легко перемикає увагу, але при цьому, може довго працювати
+
+ над певним завданням, не втрачаючи фокусу.
+
+Сангвініку нескладно примиритися з невдачами
+
+ чи неприємностями, вони не здатні вивести його
+
+ «з ладу» надовго. Найбільшу продуктивність
+
+ проявляє, якщо робота йому дійсно цікава.
+
+ У той же час, нудні завдання швидко провокують байдужість з його сторони.</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

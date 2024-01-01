@@ -13,9 +13,12 @@ import subprocess
 
 class Ui_MainWindow(object):
     cq = 0  # Initialize cq as a class variable
-    question_count = 49  # Total number of questions
-    # e_questions = [1, 3, 9, 11, 14, 17, 19, 22, 25, 27, 30, 35, 38, 41, 43, 46, 49, 53, 57]
-    # n_questions = [2, 5, 7, 10, 13, 15, 18, 21, 23, 26, 29, 31, 34, 37, 39, 42, 45, 47, 50, 52, 54, 56, 58, 60]
+    question_count = 61  # Total number of questions
+
+    yfEpo = [1, 3, 9, 11, 14, 17, 19, 22, 25, 27, 30, 35, 38, 41, 43, 46, 49, 53, 57]
+    nfEpo = [ 6, 33, 51, 55, 59.]
+    nfNpo = [2, 5, 7, 10, 13, 15, 18, 21, 23, 26, 29, 31, 34, 37, 39, 42, 45, 47, 50, 52, 54, 56, 58, 60.]
+    
     N = int(0)
     E = int(0)
     
@@ -116,20 +119,18 @@ class Ui_MainWindow(object):
         self.q.setText(self.t[cq])
 
     def no_f(self, cq):
-        if cq == :
+        if cq in self.nfEpo :
             self.E += 1
-        elif cq in self.n_questions:
+        elif cq in self.nfNpo:
             self.N += 1
         self.next_variant(self.cq)
-        self.hide_f(self.cq)
+        self.hide_f(cq)
 
     def yes_f(self, cq):
-        if cq == 1, cq == 3, cq == :
+        if cq in self.yfEpo:
             self.E += 1
-        elif cq in self.n_questions:
-            self.N += 0
         self.next_variant(self.cq)
-        self.hide_f(self.cq)
+        self.hide_f(cq)
 
     def hide_f(self, cq):
         if cq == 60:

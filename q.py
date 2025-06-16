@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         font.setFamily("Garamond")
         font.setPointSize(24)
         MainWindow.setFont(font)
-
+# question itself
         self.q = QtWidgets.QLabel(MainWindow)
         self.q.setGeometry(QtCore.QRect(50, 10, 800, 200))
         font = QtGui.QFont()
@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.q.setFont(font)
         self.q.setAlignment(QtCore.Qt.AlignCenter)
         self.q.setObjectName("q")
-
+# result text
         self.result = QtWidgets.QLabel(MainWindow)
         self.result.setGeometry(QtCore.QRect(10, 0, 255, 51))
         self.result.setWordWrap(True)
@@ -58,7 +58,7 @@ class Ui_MainWindow(object):
         self.result_desc.setFont(font)
         self.result_desc.setObjectName("result_desc")
 
-
+# one of answer options
         self.no = QtWidgets.QPushButton(MainWindow)
         self.no.setGeometry(QtCore.QRect(700, 200, 171, 71))
         font = QtGui.QFont()
@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.no.setFont(font)
         self.no.setObjectName("no")
         self.no.clicked.connect(self.no_f)
-
+# other answer option
         self.yes = QtWidgets.QPushButton(MainWindow)
         self.yes.setGeometry(QtCore.QRect(40, 200, 171, 71))
         font = QtGui.QFont()
@@ -76,7 +76,7 @@ class Ui_MainWindow(object):
         self.yes.setFont(font)
         self.yes.setObjectName("yes")
         self.yes.clicked.connect(self.yes_f)
-    
+# finish button apears when there i no more questions
         self.finish = QtWidgets.QPushButton(MainWindow)
         self.finish.setGeometry(QtCore.QRect(350, 300, 250, 71))
         font = QtGui.QFont()
@@ -85,16 +85,6 @@ class Ui_MainWindow(object):
         self.finish.setFont(font)
         self.finish.setObjectName("finish")
         self.finish.clicked.connect(self.finish_f)
-
-        # self.res = QtWidgets.QPushButton(MainWindow)
-        # self.res.setGeometry(QtCore.QRect(350, 300, 250, 71))
-        # font = QtGui.QFont()
-        # font.setFamily("Garamond")
-        # font.setPointSize(24)
-        # self.res.setFont(font)
-        # self.res.setObjectName("res")    
-        # self.res.clicked.connect(self.res_c)
-        # self.res.hide()
         
 
         self.retranslateUi(MainWindow)
@@ -110,44 +100,35 @@ class Ui_MainWindow(object):
         self.q.setText(_translate("MainWindow", "1. Вам подобаються гамір, жвавість, енергійність у вашому оточені?"))
         self.finish.setText(_translate("MainWindow", "закінчити"))
         # self.res.setText(_translate("MainWindow", "результат"))
-
+# reads questions from a file then shows them
         with open("q", "r", encoding="utf-8") as t:
             self.t = t.readlines()
-    
+# next question
     def next_variant(self, cq):
         self.cq += 1
         self.q.setText(self.t[cq])
-
+# no is pressed
     def no_f(self, cq):
-        if cq in self.nfEpo :
-            self.E += 1
+        if self.isin(cq, self.nfEpo):
+            self.E +=1
         elif cq in self.nfNpo:
-            self.N += 1
+            self.N +=1
+        print(self.E, self.N)
         self.next_variant(self.cq)
         self.hide_f(cq)
-
+# yes is pressed
     def yes_f(self, cq):
-        if cq in self.yfEpo:
-            self.E += 1
+        if self.isin(cq, yfEpo):
+            self.E +=1
+        print(self.E, self.N)
         self.next_variant(self.cq)
         self.hide_f(cq)
-
+# hides answer options
     def hide_f(self, cq):
         if cq == 60:
             self.yes.hide()
             self.no.hide()
-
-    def get_E(self):
-        return self.E
-        int(self.E)
-
-    def get_N(self):
-        return self.N
-    if E is None:
-        E = self.get_E()
-    if N is None:
-        N = self.get_N
-
+# calculates result
     def res_f(self, E, N):
 
         if E > 12 and N > 14:
@@ -171,7 +152,11 @@ class Ui_MainWindow(object):
         self.q.setText(" ")
         # self.res.show()
         self.res_f(self.E, self.N)
-
+    def isin(cq, list):
+        for i in list:
+            if cq == i:
+                return true
+                break
         
 if __name__ == "__main__":
     import sys
